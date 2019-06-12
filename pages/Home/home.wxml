@@ -1,0 +1,11 @@
+<!--pages/Home/home.wxml-->
+<view class='container'>
+   <image class='user_avatar' src='/images/icon-1024.png'>
+   </image>
+   <text class='user_name'><text style='color:#1890FF'>Hello</text> , 28TMS</text>
+   <view class='boarderContainer' bindtap='onTap'>
+      <text class='jourery'>开启小程序之旅</text>
+   </view>
+
+</view>
+

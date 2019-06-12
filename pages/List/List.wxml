@@ -1,0 +1,23 @@
+<import src='List-item/List-item-template.wxml' />
+
+<view>
+  <swiper catchtap='onSwiperTap' indicator-dots='true' style='width:100%;height:500rpx' autoplay='{YES}' duration='1.0'>
+    <swiper-item>
+      <image src='/images/wx.png' style='width:100%;height:500rpx' data-postId='3'> </image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/iqiyi.png' style='width:100%;height:500rpx' data-postId='5'> </image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/vr.png' style='width:100%;height:500rpx' data-postId='4'> </image>
+    </swiper-item>
+  </swiper>
+
+  <block wx:for='{{posts_key}}' wx:key='posts_key' wx:for-item='item' wx:for-index='idx'>
+    <view catchtap='onListTap' data-postId='{{item.postId}}'>
+      <template is='ListItem' data='{{...item}}' />
+    </view>
+
+  </block>
+
+</view>
